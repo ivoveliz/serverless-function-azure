@@ -1,0 +1,41 @@
+	
+service: magikarp-backend
+ 
+provider:
+  name: azure
+  location: East US
+  runtime: nodejs14
+ 
+plugins:
+  - serverless-azure-functions
+ 
+package:
+  exclude:
+    - local.settings.json
+    - .vscode/**
+ 
+functions:
+  deviceValuesRealtimetable:
+    handler: src/handlers/deviceValuesRealtimetable.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel: anonymous
+          
+  deviceValuesChartTable:
+    handler: src/handlers/deviceValuesChartTable.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel: anonymous
+
+  deviceValuesRealtimechart:
+    handler: src/handlers/deviceValuesRealtimechart.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel: anonymous
+
+
+
+          

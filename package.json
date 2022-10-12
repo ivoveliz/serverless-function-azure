@@ -1,0 +1,21 @@
+{
+  "name": "func-rest-api-azure",
+  "version": "1.0.0",
+  "description": "Azure Functions sample for the Serverless framework",
+  "scripts": {
+    "test": "echo \"No tests yet...\"",
+    "start": "func host start"
+  },
+  "keywords": [
+    "azure",
+    "serverless"
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "moment-timezone": "^0.5.37",
+    "mongoose": "^6.6.4"
+  },
+  "devDependencies": {
+    "serverless-azure-functions": "^2.1.3"
+  }
+}
